@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Dinâmicas</title>
+    <style>
+        body{background-color: aqua;}
+    </style>
+</head>
+<body>
+    <h1>Mídias em html5</h1>
+    <h2>Imagens Dinâmicas</h2>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+    <picture>
+        <source media="(max-width: 750px )" srcset="Imagens/foto-p.png" type="Image/png">
+        <source media="(max-width: 1050px )" srcset="Imagens/foto-m.png" type="Image/png">
+      <img src="Imagens/foto-g.png" alt="Imagem flexível"> 
+    </picture>
+<h2 style="background-color: blueviolet;"> 
+    Reproduzindo Áudio
+</h2>
+<p>Vamos aprender a reproduzir audios em HTML5</p>
+<audio src="midia/Smoke Jacket Blues - TrackTribe.mp3"controls autoplay loop></audio>
+<!--MP3,wav, ogg-->
+
+<h3 style="background-color: blueviolet;font-style: normal;; "> segunda alternativa reprodução audio</h3>
+<audio preload="metadata" autoplay controls loop>
+    <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+    <source src="midia/guanacast-33.ogg" type="audio/ogg">
+    <source src="midia/guanacast-33.wav" type="audio/wav">
+    <p>Infelizmente seu navegador não consegue reproduzir aúdio.
+        <a href="http:m73.com.br">clique aqui para baixar o arquivo</a>
+    </p>
+</audio>
+
+    
+</body>
+</html>

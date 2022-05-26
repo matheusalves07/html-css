@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;background-color: aqua;
+        }
+        a {
+            color:red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:visited{
+            color: darkred;
+        }
+
+    a:hover{ text-decoration: underline;}
+    a:active{ color: blueviolet;}
+    a::after{ content:'[link]';
+text-decoration: none;
+font-weight: normal;
+color: darkgray;}
+
+/* Seletores personalizados
+# = id
+. = Class
+: = pseudo-class
+:: = pseudo-element
+> = Clindren
+*/
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li> <a href="https://github.com/gustavoguanabara/html-css/tree/master/aulas-pdf" rel="external" target="blank">Repositório Github</a></li>
+        <li><a href="https://www.youtube.com/channel/UCrWvhVmt0Qac3HgsjQK62FQ" rel="external" target="blank">Canal do Youtube</a></li>
+        <li><a href="https://www.cursoemvideo.com/" rel="external" target="blank">Site Curso em vídeo</a></li>
+        <li><a href="https://www.m73.com.br/" rel="external" target="blank">Site m73</a></li>
+    </ul>
+</body>
+</html>
