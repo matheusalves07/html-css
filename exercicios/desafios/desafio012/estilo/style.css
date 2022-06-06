@@ -5,6 +5,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
+
 :root{
     --font1:verdana,geneva,  tahoma, sans-serif ;
     --font2: 'Passion One', 'cursive';
@@ -16,9 +17,11 @@
     margin: 0px;
     padding: 0px;
     font-size: 1em;
+    
 }
 
 html, body{
+    
     min-height: 100vh;
     background-color: darkgray;
     font-family: var(--font1);
@@ -64,6 +67,11 @@ section{
     font-size: 3vw;
 }
 
+section > p {
+
+    padding-bottom: 2em;
+
+}
 section.normal{
     background-color: white;
     color: black;
@@ -73,13 +81,27 @@ section.imagem{
     background-color: rgba(0, 0, 0, 0.548);
     color: white;
     padding: 5px;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.196) ;
+    background-size: cover;
+    background-attachment: fixed;
 
+}
+
+section#img01{
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+}
+
+section#img02{
+    background-image: url('../imagens/background002.jpg');
+    background-position: right center;
 }
 
 section.imagem >p {
     background-color: rgba(0, 0, 0, 0.247);
     display: inline-block;
     border-radius: 6px;
+    text-shadow: 1px 1px 0px black;
 
 }
 
