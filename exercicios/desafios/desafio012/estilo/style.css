@@ -24,23 +24,25 @@ html, body{
     font-family: var(--font1);
 }
 
-header{
+header {
     background-color: black;
     color: white;
     text-align: center;
-   
+
 }
 
-header> h1 {
-    padding top:50px ;
+
+header > h1 {
+    padding-top:50px ;
     font-variant: small-caps;
     font-family: var(--font2);
-    font-size:10vw;
+    font-size:8vw;
     
 }
 
 header > p {
     padding-bottom: 50px;
+
 }
 
 a {
@@ -59,7 +61,7 @@ section{
     line-height: 2em;
     padding-left: 30px;
     font-family: var(--font3);
-    font-size: 4vw;
+    font-size: 3vw;
 }
 
 section.normal{
