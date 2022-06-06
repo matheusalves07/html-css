@@ -15,26 +15,32 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-size: 1em;
 }
 
 html, body{
     min-height: 100vh;
     background-color: darkgray;
+    font-family: var(--font1);
 }
 
 header{
     background-color: black;
     color: white;
     text-align: center;
+   
 }
 
-header>h1 {
+header> h1 {
     padding top:50px ;
     font-variant: small-caps;
+    font-family: var(--font2);
+    font-size:10vw;
+    
 }
 
-header>p {
-    padding-bottom:50px ;
+header > p {
+    padding-bottom: 50px;
 }
 
 a {
@@ -52,6 +58,8 @@ section{
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
+    font-family: var(--font3);
+    font-size: 4vw;
 }
 
 section.normal{
@@ -62,13 +70,15 @@ section.normal{
 section.imagem{
     background-color: rgba(0, 0, 0, 0.548);
     color: white;
+    padding: 5px;
 
 }
 
 section.imagem >p {
     background-color: rgba(0, 0, 0, 0.247);
-    width: 400px;
+    display: inline-block;
     border-radius: 6px;
+
 }
 
 
