@@ -64,7 +64,7 @@ section{
     line-height: 2em;
     padding-left: 30px;
     font-family: var(--font3);
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
 
 section > p {
@@ -97,7 +97,7 @@ section#img02{
     background-position: right center;
 }
 
-section.imagem >p {
+section.imagem > p {
     background-color: rgba(0, 0, 0, 0.247);
     display: inline-block;
     border-radius: 6px;
