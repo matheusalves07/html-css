@@ -18,7 +18,7 @@
         }
         table{
             color: white;
-            
+            height: 400px;
             width: 400px;
             border-collapse: collapse;
             border: 5px solid red;
@@ -30,6 +30,8 @@
         td {
             border: 1px solid rgba(0, 0, 0, 0.627);
             padding: 8px;
+            text-align: center; /* alinhamento horizontal*/
+            vertical-align:middle;
         }
         td.dado{
             background-color: rgb(3, 113, 65);
@@ -37,6 +39,14 @@
 
         td.red:hover{
             background-color: red;
+        }
+
+        .numero{
+            text-align: right;
+        }  
+        
+        abbr{
+            text-decoration: none;
         }
     </style>
 </head>
@@ -63,13 +73,13 @@
       <tr class="linha"> 
         <td>A2</td>
         <td class="red">B2</td>
-        <td>C2</td>
+        <td class="numero">C2</td>
 
     </tr>
     <tr> 
         <td>A3</td>
-        <td>B3</td>
-        <td>C3</td>
+        <td><abbr title=" oi color">B3</abbr></td>
+        <td class="numero">C3</td>
 
     </tr>
     <tr > 
