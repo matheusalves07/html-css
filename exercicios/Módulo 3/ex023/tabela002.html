@@ -29,6 +29,8 @@
             font-weight: bold;
             padding: 10px;
             background-color: lightgray;
+            border: 0.7px solid rgba(0, 0, 0, 0.085);
+           
         }
         thead, tfoot{
             background-color:  #38383896;   
@@ -73,8 +75,8 @@
         <caption>População das Unidades federativas</caption>
         <thead >
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width:50px ;">População</th>
             </tr>
         </thead>
 
@@ -193,7 +195,7 @@
 
         <tfoot>
             <tr>
-                <th>Total de habitantes </th>
+                <th scope="row">Total de habitantes </th>
                 <td class="num"><strong>212,6 mi</strong> </td>
             </tr>
         </tfoot>
