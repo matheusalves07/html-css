@@ -9,6 +9,17 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
+        table{
+            border-collapse: collapse;
+            width: 300px;
+            
+        }
+
+        td{
+            border: 0.3px solid rgba(0, 0, 0, 0.207);
+            padding:10px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -16,23 +27,24 @@
     <table>
         <tr>
             <td>A</td>
-            <td>B</td>
-            <td>C</td>
+            <td colspan="2">B</td>
+            
+            
         </tr>
         <tr>
-            <td>D</td>
-            <td>E</td>
+            <td rowspan="3">D</td>
+            <td rowspan="2">E</td>
             <td>F</td>
         </tr>
         <tr>
-            <td>G</td>
+            
             <td>H</td>
-            <td>I</td>
+            
         </tr>
         <tr>
-            <td>J</td>
-            <td>L</td>
-            <td>M</td>
+            
+            
+            <td colspan="2">M</td>
         </tr>
     </table>
     
