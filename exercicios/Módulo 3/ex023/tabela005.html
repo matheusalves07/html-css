@@ -5,11 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela005</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 500px;
+            border-collapse: collapse;
+        }
+        caption{
+            font-size: 1.3em;
+            font-weight: bolder;
+            padding: 8px;
+        }
+        th,td{
+            border: 1px solid rgba(0, 0, 0, 0.419);
+            padding: 8px;
+        }
+       .destaque{
+            background-color: chartreuse;
+        }
+        col.cnome{
+            background-color: chartreuse;
+        }
+        col.csexo, col.cidade{
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
 
 <h1>Excercícios Tabela</h1>
 <table>
+    <colgroup>
+    <col class="cnome">
+    <col class="csexo">
+    <col class="cidade">
+    <col class="cprof"> 
+    </colgroup>
     <caption>Cadastro</caption>
     <tr> 
         <th scope="col">Nome</th>
@@ -18,10 +51,34 @@
         <th scope="col">Profissão</th>
     </tr>
     <tr>
-        <td>Ana Maria</td>
+        <td>Cláudio</td>
+        <td>M</td>
+        <td>20</td>
+        <td>Programador</td>
+    </tr>
+    <tr>
+        <td>Gustavo</td>
+        <td>M</td>
+        <td>45</td>
+        <td>Professor</td>
+    </tr>
+    <tr>
+        <td>Hélio</td>
+        <td>M</td>
+        <td>19</td>
+        <td>Vendedor</td>
+    </tr>
+    <tr>
+        <td >Maria</td>
         <td>F</td>
-        <td>25</td>
-        <td>Jornalista</td>
+        <td>29</td>
+        <td>Médica</td>
+    </tr>
+    <tr>
+        <td>Òtavio</td>
+        <td>M</td>
+        <td>22</td>
+        <td>Nutricionista</td>
     </tr>
 
 
