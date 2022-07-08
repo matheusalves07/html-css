@@ -27,6 +27,19 @@
             left: 35%;
             right: 50%;
         }
+        form:hover{
+            border: 1px solid black;
+            padding: 10px;
+            background-color: rgba(250, 52, 52, 0.616);
+            width: 400px;
+            text-align: center;
+            position:relative;
+            /*display: inline-block;*/
+            top: 50%;
+            bottom: 50%;
+            left: 35%;
+            right: 50%;
+        }
         input{
             border-radius: 5px;
             background-color: rgba(0, 255, 255, 0.607);
@@ -35,10 +48,22 @@
 </head>
 <body>
     <h1>Meu Primeiro Formulário</h1>
-    <form action="">
-        <p>Nome: <input type="text" name="nome" id="nome"></p>
-        <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
-        <p><input type="submit" value="Enviar"></p>
+    <!--autocomplete="off" = para desligar informações do navegados (cookies)-->
+    <!--
+        Label é a forma de vincular o ex:( nome, número, sobrenome) relacionar ao input ,
+        uso obrigatório
+
+    -->
+    <form action="cadastro.php" autocomplete="off">
+        <p><label for="inome">Nome:</label> 
+            <input type="text" name="nome" id="inome">
+        </p>
+        <p><label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="isobrenome"></p>
+        <p>
+            
+            <input type="submit" value="Enviar">
+        </p>
     </form>
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSenXJ3bakjcXGpurwMzTqSn0Y1XBo-rAUiMmAveuwK2XSxJJA/viewform?embedded=true" width="640" height="947" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
 </body>
