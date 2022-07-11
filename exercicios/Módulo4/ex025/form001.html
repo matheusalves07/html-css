@@ -53,7 +53,12 @@
         Label é a forma de vincular o ex:( nome, número, sobrenome) relacionar ao input ,
         uso obrigatório . Label for= "id do input" -> input = id " igual o FOR"
     -->
-    <form action="cadastro.php" autocomplete="off">
+    <!--
+        method="post" é usado para ocultar da url os dados inseridos no formulário , mas é necessário ter https
+        para criptografia dos dados
+    -->
+
+    <form action="cadastro.php" method="post" autocomplete="off">
         <p><label for="inome">Nome:</label> 
             <input type="text" name="nome" id="inome">
         </p>
