@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário </title>
     <link rel="shortcut icon" href="https://lh3.googleusercontent.com/fwOhBljNM2DLuUX2s3E0O_U2P-aWEZ5EMcOIY8T2Jc5Y4FR4HX1Jqh5tsjIfsnlI71YA_W98bF2xsos6iEuQ8JEnaA=w128-h128-e365-rj-sc0x00ffffff" type="image/x-icon">
+    <style>
+
+    </style>
 </head>
 <body>
     <h1> Teste de formulário 2</h1>
@@ -29,9 +32,36 @@
 
     <hr>
 
+    <h2>formulário 2 </h2>
+
     <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iname">Digite seu nome</label><br>
+            <input placeholder="Digite algo" type="text" required autocomplete="username" value="" name="" id="iname" ><br>
+        </p>
 
+        <p>
+            <label for="itextarea">Digite sua menssagem</label>
+            <textarea placeholder="digite algo.." name="" required id="itextarea" cols="20" rows="2"></textarea>
+        </p>
 
+        <p>
+            <input type="checkbox" value="SIM" name="" id="icheck">Eu aceito termos do contrato</a>
+        </p>
+        <button type="submit">Enviar</button>
+
+        <p>
+            <label for="iradius">Escolha sua cor favorita</label>
+            <ul>
+                <li>
+                    <input value="red" type="radio" name="cor" id="iradius">red
+                </li>
+                <li>
+                    <input value="blue" type="radio" name="cor" id="iradius">blue
+                </li>
+            </ul>
+            <input type="radio" name="" id="iradius">
+        </p>
     
     </form>
     
