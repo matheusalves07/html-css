@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form004</title>
+    <style>
+        
+        body{
+
+            background-color: rgba(128, 128, 128, 0.356);
+        }
+
+        form {
+            width: 20vw;
+            position: absolute;
+            left: 40%;
+            text-align: center;
+        }
+        fieldset{
+            border: 0.5px solid white;
+        }
+        legend{
+            border-radius: 4px;
+            background-color: white;
+            padding: 5px 3px 5px 30px;
+            color: black;
+        }
+        legend:hover{
+            border-radius: 4px;
+            background-color: white;
+            padding: 5px 3px 5px 30px;
+            color: gray;
+        }
+
+        form > fieldset{
+            border: 1px solid rgba(0, 0, 0, 0.434);
+            border-radius: 20px;
+            transition: border-radius 1s;
+        }
+
+        form > fieldset:hover{
+            background-image: url(https://www.10wallpaper.com/wallpaper/2560x1600/1604/Pink_solid_color_light_bright-Design_Theme_HD_Wallpapers_2560x1600.jpg);
+            border: 1px solid rgba(0, 0, 0, 0.434);
+            color: #ffffff;
+            border-radius: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" autocomplete="name" minlength="5" maxlength="20">
+            </p>
+            <p>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="iemail" required autocomplete="email">
+            </p>
+            <p>
+                <label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" required
+                pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(73)99106-7781 "
+                >
+            
+            </p>
+        </fieldset>
+            <!--Estudar mais sobre RegEX -->
+        <p>
+
+           <input type="submit" value="Enviar">
+           <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+    
+</body>
+</html>
