@@ -70,8 +70,27 @@ nav#menu li{
     background-color: #dddd;
     padding: 10px;
     margin: 2px;
+    transition: background-color 1s;
+}
+nav#menu li:hover{
+
+    background-color:#606060 ;
+
+
 }
 
 nav#menu h1{
     display: none;
+}
+
+nav#menu a{
+
+    color: #000000;
+    text-decoration: none;
+}
+
+nav#menu a:hover{
+
+    color: #ffffff;
+    
 }
