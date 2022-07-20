@@ -87,6 +87,7 @@ nav#menu a{
 
     color: #000000;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 nav#menu a:hover{
