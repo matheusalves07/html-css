@@ -163,15 +163,13 @@ aside#lateral{
     display: block;
     width: 350px;
     float: right;
-    padding-right: 3px;
-    
+    padding-right: 3px; 
 }
 
 footer#rodape{
 
     clear: both;
     border-top: 1px solid #606060;
-
 }
 
 footer#rodape p{
