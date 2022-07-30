@@ -12,7 +12,21 @@ p{
     text-align: justify;
     text-indent: 50px;
 }
+
+a{
+    color: #606060;
+    text-decoration: none;
+
+}
+
+a:hover {
+
+    text-decoration: underline;
+    
+}
+
 body{
+    font-family: Arial, Helvetica, sans-serif;
     background-image: url();
     color: rgba(0, 0, 0, 0.763);
     background-color: #dddd;
@@ -151,11 +165,54 @@ nav#menu a:hover{
 section#corpo{
 
     display: block;
-    width: 570px;
+    width: 600px;
     float: left;
     border-right:1px solid #606060 ;
     padding-right:15px ;
     padding-left: 5px;
+}
+
+article#noticia-principal h2 {
+
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px ;
+
+}
+
+header#cabecalho-artigo h1{
+
+    font-family: 'FonteLogo';
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+
+
+}
+
+header#cabecalho-artigo h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+    
+}
+
+header#cabecalho-artigo h3{
+    font-size: 12px;
+    color: #606060;
+    margin-top: 0px;
+
+}
+
+header#cabecalho-artigo h3.direita{
+    text-align: right;
+    font-size: 12px;
+    color: #606060;
+    margin-top: 0px;
+    
 }
 
 table#tabelaespc{
@@ -174,12 +231,75 @@ table#tabelaespc td{
     vertical-align: middle;
 }
 
+table#tabelaespc td.ce{
+
+    color: white;
+    background-color: #606060;
+    vertical-align: top ;
+    font-weight: bold;
+}
+
+table#tabelaespc td.cd{
+
+    background-color: #cecece;
+    
+}
+
+table#tabelaespc caption{
+
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+table#tabelaespc caption span {
+
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
 aside#lateral{
 
     display: block;
     width: 350px;
     float: right;
-    padding-right: 3px; 
+    padding-right: 10px; 
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.485);
+    background-color: #dddddd;
+    border-radius: 18px 60px 18px 8px;
+
+}
+
+aside#lateral h1 {
+    font-family: 'FonteLogo';
+    font-size: 20pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 10px;
+    border-radius: 3px;
+    margin-left: 2px;
+    
+
+}
+
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 3px;
+    margin-left: 2px;
+
+    
+}
+
+aside#lateral p {
+
+    padding-left: 10px;
 }
 
 footer#rodape{
