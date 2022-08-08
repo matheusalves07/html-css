@@ -1,8 +1,6 @@
-@charset "UTF-8"
+@charset "UTF-8";
+/* Aparelho em pé ( portrait) */
 
-/* */
-
-body{
-
-    background-color: yellow;
+body {
+    background-color: darkgreen;
 }
