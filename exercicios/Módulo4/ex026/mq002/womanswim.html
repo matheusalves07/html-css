@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .single-person-pool {
+  background-color: #52d0e0;
+}
+.pool0 {
+  fill: #52d0e0;
+}
+.pool1 {
+  fill: #3ea6c5;
+}
+.pool2 {
+  fill: #43e4da;
+}
+.pool3 {
+  fill: #305ee9;
+}
+.pool4 {
+  fill: #47a2b1;
+}
+.pool5 {
+  fill: #317dc7;
+}
+.pool6 {
+  fill: none;
+  stroke: #7b8e9e;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+.pool7 {
+  fill: none;
+  stroke: #bbd7c4;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+.pool8 {
+  fill: none;
+  stroke: #3fb3ff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+.pool9 {
+  fill: none;
+  stroke: #d5dfe2;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+.pool13 {
+  fill: none;
+  stroke: #d5dfe2;
+  stroke-width: 9;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+.pool15 {
+  fill: #00006c;
+}
+.pool16 {
+  fill: #d5dfe2;
+}
+.pool17 {
+  fill: none;
+  stroke: #00006c;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+#r-arm-2,
+#r-arm-3,
+#r-arm-4,
+#r-arm-5 {
+  opacity: 0;
+}
+
+#l-arm-2,
+#l-arm-3,
+#l-arm-4,
+#l-arm-5 {
+  opacity: 0;
+}
+
+#r-leg-2,
+#r-leg-3,
+#r-leg-4,
+#r-leg-5 {
+  opacity: 0;
+}
+
+#l-leg-2,
+#l-leg-3,
+#l-leg-4,
+#l-leg-5 {
+  opacity: 0;
+}
+
+#head {
+  transform-origin: 241px 276px;
+  animation: head 2.25s ease infinite;
+}
+
+@keyframes head {
+  0% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+   90%,
+   100%{
+    transform: rotate(30deg);
+  }
+}
+
+#spiral {
+  animation: spiral 2.25s ease infinite;
+}
+
+@keyframes spiral {
+  0% {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+  }
+
+  100% {
+    stroke-dasharray: 200;
+    stroke-dashoffset: -200;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <script>var svg = document.getElementById("swimming-girl");
+        var s = Snap(svg);
+        var Rarm1 = Snap.select("#r-arm-1");
+        var Rarm2 = Snap.select("#r-arm-2");
+        var Rarm3 = Snap.select("#r-arm-3");
+        var Rarm4 = Snap.select("#r-arm-4");
+        var Rarm5 = Snap.select("#r-arm-5");
+        var Larm1 = Snap.select("#l-arm-1");
+        var Larm2 = Snap.select("#l-arm-2");
+        var Larm3 = Snap.select("#l-arm-3");
+        var Larm4 = Snap.select("#l-arm-4");
+        var Larm5 = Snap.select("#l-arm-5");
+        var Rleg1 = Snap.select("#r-leg-1");
+        var Rleg2 = Snap.select("#r-leg-2");
+        var Rleg3 = Snap.select("#r-leg-3");
+        var Rleg4 = Snap.select("#r-leg-4");
+        var Rleg5 = Snap.select("#r-leg-5");
+        var Lleg1 = Snap.select("#l-leg-1");
+        var Lleg2 = Snap.select("#l-leg-2");
+        var Lleg3 = Snap.select("#l-leg-3");
+        var Lleg4 = Snap.select("#l-leg-4");
+        var Lleg5 = Snap.select("#l-leg-5");
+        var swimpos = Snap.select("#swimming-girl");
+        var head = Snap.select("head");
+        
+        var Rarm1Points = Rarm1.node.getAttribute("d");
+        var Rarm2Points = Rarm2.node.getAttribute("d");
+        var Rarm3Points = Rarm3.node.getAttribute("d");
+        var Rarm4Points = Rarm4.node.getAttribute("d");
+        var Rarm5Points = Rarm5.node.getAttribute("d");
+        var Larm1Points = Larm1.node.getAttribute("d");
+        var Larm2Points = Larm2.node.getAttribute("d");
+        var Larm3Points = Larm3.node.getAttribute("d");
+        var Larm4Points = Larm4.node.getAttribute("d");
+        var Larm5Points = Larm5.node.getAttribute("d");
+        var Rleg1Points = Rleg1.node.getAttribute("d");
+        var Rleg2Points = Rleg2.node.getAttribute("d");
+        var Rleg3Points = Rleg3.node.getAttribute("d");
+        var Rleg4Points = Rleg4.node.getAttribute("d");
+        var Rleg5Points = Rleg5.node.getAttribute("d");
+        var Lleg1Points = Lleg1.node.getAttribute("d");
+        var Lleg2Points = Lleg2.node.getAttribute("d");
+        var Lleg3Points = Lleg3.node.getAttribute("d");
+        var Lleg4Points = Lleg4.node.getAttribute("d");
+        var Lleg5Points = Lleg5.node.getAttribute("d");
+        
+        var myMatrix = new Snap.Matrix();
+        myMatrix.translate(-20, 0);
+        myMatrix.rotate(-1);
+        
+        var myInvertedMatrix = myMatrix.invert();
+        
+        var swimBack = function () {
+          swimpos.animate({ transform: myMatrix }, 1125, mina.easeinout, function () {
+            swimpos.animate({ transform: myInvertedMatrix }, 1125, mina.easeinout);
+          });
+        };
+        
+        var toRarm1 = function () {
+          Rarm1.animate({ d: Rarm1Points }, 450, mina.linear);
+          Larm1.animate({ d: Larm1Points }, 450, mina.linear);
+          Rleg1.animate({ d: Rleg1Points }, 450, mina.linear);
+          Lleg1.animate({ d: Lleg1Points }, 450, mina.linear, toRarm2);
+        
+          swimBack();
+        };
+        
+        var toRarm2 = function () {
+          Rarm1.animate({ d: Rarm2Points }, 450, mina.linear);
+          Larm1.animate({ d: Larm2Points }, 450, mina.linear);
+          Rleg1.animate({ d: Rleg2Points }, 450, mina.linear);
+          Lleg1.animate({ d: Lleg2Points }, 450, mina.linear, toRarm3);
+        };
+        
+        var toRarm3 = function () {
+          Rarm1.animate({ d: Rarm3Points }, 450, mina.linear);
+          Larm1.animate({ d: Larm3Points }, 450, mina.linear);
+          Rleg1.animate({ d: Rleg3Points }, 450, mina.linear);
+          Lleg1.animate({ d: Lleg3Points }, 450, mina.linear, toRarm4);
+        };
+        
+        var toRarm4 = function () {
+          Rarm1.animate({ d: Rarm4Points }, 450, mina.linear);
+          Larm1.animate({ d: Larm4Points }, 450, mina.linear);
+          Rleg1.animate({ d: Rleg4Points }, 450, mina.linear);
+          Lleg1.animate({ d: Lleg4Points }, 450, mina.linear, toRarm5);
+        };
+        
+        var toRarm5 = function () {
+          Rarm1.animate({ d: Rarm5Points }, 450, mina.linear);
+          Larm1.animate({ d: Larm5Points }, 450, mina.linear);
+          Rleg1.animate({ d: Rleg5Points }, 450, mina.linear);
+          Lleg1.animate({ d: Lleg5Points }, 450, mina.linear, toRarm1);
+        };
+        
+        toRarm1();
+        </script>
+    <!--
+concept:I heard that Google campus has a single person swimming pool and so I imagine it would work like this
+technique: stroke animtion + shape morphing
+-->
+
+<!--
+concept:I heard that Google campus has a single person swimming pool and so I imagine it would work like this
+technique: stroke animtion + shape morphing
+-->
+
+<svg version="1.1" class="single-person-pool" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+    <g id="pool">
+      <path class="pool1" d="M550.9,402.3H124.8c-3.8,0-7.3-2.4-8.6-6L44,201.9c-0.6-1.7-1-3.6-1.1-5.4L42.2,182c0,0,2.8-8,7.4-7l385.7-1
+               c3.4,0,6.6,14.9,8.2,18L555,378.5l-0.1,19.8C554.9,400.5,553.1,402.3,550.9,402.3z" />
+      <path class="pool2" d="M545.9,388.3H124.8c-3.8,0-7.3-2.4-8.6-6L43,185.3c-2.2-6,2.2-12.4,8.6-12.4h383.7c3.4,0,6.6,1.9,8.2,5
+               L554,375C557.2,381.1,552.7,388.3,545.9,388.3z" />
+      <path class="pool3" d="M522.7,363.3H133.3l-63-169.8l359.2,0l95.5,167.1C525.7,361.8,524.2,363.3,522.7,363.3z" />
+      <polygon class="pool4" points="429.6,193.5 430.5,268.9 487,363.3 526.9,363.5 	" />
+      <polygon class="pool5" points="430.5,268.9 429.6,193.5 70.3,193.5 99,270.5 	" />
+      <path class="pool6" d="M485.9,219.1c0-7.9-6.4-14.3-14.3-14.3h0c-7.9,0-14.3,6.4-14.3,14.3v91.6" />
+      <path class="pool6" d="M502.9,243.1c0-7.9-6.4-14.3-14.3-14.3h0c-7.9,0-14.3,6.4-14.3,14.3v95" />
+      <line class="pool6" x1="474.7" y1="297.9" x2="457.8" y2="267.7" />
+      <line class="pool6" x1="474.7" y1="317.9" x2="457.8" y2="287.7" />
+      <path class="pool7" d="M457.4,251.4v-32.3c0-7.9,6.4-14.3,14.3-14.3h0c7.9,0,14.3,6.4,14.3,14.3v9.2" />
+      <path class="pool7" d="M474.4,282v-38.8c0-7.9,6.4-14.3,14.3-14.3h0c7.9,0,14.3,6.4,14.3,14.3v9.1" />
+    </g>
+    <g>
+      <path class="pool8" id="spiral" d="M107.6,276.8c0,0,36.1,0.1,49-2.5c21.4-4.2,26-12.8,24-21.6c-2.6-11.3-27.9-16-37.7-2.9
+               c-6.6,8.9,4.9,15.2,15.3,13.2c10.4-2,10-11.3,0.7-11.6" />
+      <path class="pool8" id="spiral" d="M115.6,291.9c0,0,36.1-0.1,49,2.5c21.4,4.2,26,12.8,24,21.6c-2.6,11.3-27.9,16-37.7,2.9
+               c-6.6-8.9,4.9-15.2,15.3-13.2c10.4,2,10,11.3,0.7,11.6" />
+    </g>
+    <g id="swimming-girl">
+      <g id="right-arm">
+        <path id="r-arm-1" class="pool9" d="M250.4,271.5c0,0-10-6.3-27.8-5.7c-7.1,0.2-13.4,3.9-22.7,7.5c-2.2,0.8-7.5,1.8-9.8,2.8" />
+        <path id="r-arm-2" class="pool9" d="M251.7,271.8c0,0-3.9-2.5-14.1-3.9c-7.1-1-21.2,2.7-25.9,4.6c-2.1,0.9-5.7,0.3-8.7-0.3" />
+        <path id="r-arm-3" class="pool9" d="M250.7,272.8c0,0,4.8-5.7-0.5-5.7c-7.1,0-12.3,0.8-17,2.7c-2.1,0.9-6.9-1-8.3-1.5" />
+        <path id="r-arm-4" class="pool9" d="M250.7,272.8c0,0,9.1,7,13.3,15.8c3.1,6.4,1.5,10,0.5,15c-0.5,2.3-2,5-3.5,5.5" />
+        <path id="r-arm-5" class="pool9" d="M251.7,272.8c0,0-3.7,3.1-3,14.4c0.3,3.7-15.2,6.8-20.2,6.4c-2.4-0.2-7.5-0.1-9,0.4" />
+      </g>
+      <g id="leg-right">
+        <path id="r-leg-1" class="pool13" d="M306.7,272.3c0,0,22.1-3.9,27.1-4.3c5.8-0.4,19-1,26.1-1.4c4.5-0.2,12.5-1.4,12.5-1.4" />
+        <path id="r-leg-2" class="pool13" d="M306.7,272.3c0,0,14.2-0.7,36.8-0.8c11.3-0.1,24.8,0,39.6,0.4c4.2,0.1,12.1,0.2,16.4,0.4" />
+        <path id="r-leg-3" class="pool13" d="M306.7,272.3c0,0,14.2-0.7,36.8-0.8c11.3-0.1,24.8,0,39.6,0.4c4.2,0.1,12.1,0.2,16.4,0.4" />
+        <path id="r-leg-4" class="pool13" d="M306.7,272.3c0,0,17.4-4.2,27.9-4.6c11.3-0.5,38.5,6.3,38.5,6.3c4.2,0.1,12.1,0.2,16.4,0.4" />
+        <path id="r-leg-5" class="pool13" d="M306.7,270.3c0,0,5.9-8.8,9.8-8.8c2.5,0,21.6,10.4,21.6,10.4c1.7,1.1,7.9,2.2,10.4,2.4" />
+      </g>
+      <g id="leg-left">
+        <path id="l-leg-1" class="pool13" d="M306.7,285.4c0,0,21.2,11.9,28.4,14.2c12.6,4,27.9,6.5,37.6,7.7c5,0.6,9.2,1.5,14.9,3.5" />
+        <path id="l-leg-2" class="pool13" d="M306.7,285.4c0,0,13.1-0.1,35.8-0.2c12,0,27.4,0,43.3,0.1c4.4,0,12.5,0,17,0.1" />
+        <path id="l-leg-3" class="pool13" d="M306.7,285.4c0,0,13.1-0.1,35.8-0.2c12,0,27.4,0,43.3,0.1c4.4,0,12.5,0,17,0.1" />
+        <path id="l-leg-4" class="pool13" d="M306.7,285.4c0,0,23.1,12.5,35.8,9.9c11.7-2.5,31.3-9.9,31.3-9.9c4.4,0,12.5,0,17,0.1" />
+        <path id="l-leg-5" class="pool13" d="M306.7,285.4c0,0,14.2,19.7,20.6,19.7c6.4,0,12.6-14.1,12.6-14.1c1.7-0.8,4.5-3.3,9-5.6" />
+      </g>
+      <g id="body">
+        <line id="neck" class="pool13" x1="257.8" y1="278.5" x2="238.2" y2="278.5" />
+        <g id="back">
+          <path class="pool15" d="M259.9,268.9l0.4,19.2l28.1-0.3l13.9,1.6c5.4,0,8.1-5.5,8.1-10.8c0-5.4-3.7-11-9.1-11l-14.2,1.6" />
+          <path class="pool16" d="M260.3,288.1" />
+          <path class="pool16" d="M252.8,268.8c-3,0-3.6,3.6-5.4,5.7c0,0,0.7,1.6,0.7,4c0,3-1.1,4.1-1.1,4.1c1.7,1.3,0.8,5.5,6.8,5.6l6.6-0.1
+                   l2-5.6c1.2-3.2,1-6.8-0.6-9.9l-1.8-3.7L252.8,268.8z" />
+        </g>
+        <g id="knot">
+          <line class="pool17" x1="247" y1="282.5" x2="246.8" y2="274.6" />
+          <polyline class="pool17" points="250,274.1 247.4,275.9 250,277.1 		" />
+        </g>
+        <g id="head">
+          <path class="pool16" d="M242.9,278c0,6.6-6.5,12-14.5,12s-14.5-5.4-14.5-12" />
+          <path class="pool15" d="M242.9,278c0,4.2-3.1,6.4-6.9,7.5c-1.1,0.3-3-0.8-5.2-0.6c-4.5,0.3-3,1.8-2.9,2.4c-4.3,0.4-6.4-0.2-8.3-1.1
+                   c-0.7-0.4-1.3,0.3-1.7,0.1c-2.5-1.3-4.1-5.5-4.1-8.3c0-6.6,6.5-12,14.5-12S242.9,271.3,242.9,278z" />
+          <circle class="pool15" cx="238.7" cy="268.8" r="3.7" />
+        </g>
+      </g>
+      <g id="left-arm">
+        <path id="l-arm-1" class="pool9" d="M253.1,285.4c0,0-15.7,9.1-29,7.2c-6.7-1-14.6-4.1-23.5-9c-1.9-1-5.9-2.2-7.9-3.4" />
+        <path id="l-arm-2" class="pool9" d="M251.6,287.3c0,0-5,12.5-11.6,13.9c-6.8,1.5-16.8,1.8-23.2-0.4c-2-0.7-5.7-1.5-7.7-2.7" />
+        <path id="l-arm-3" class="pool9" d="M252.6,284.3c0,0,18.8,11.9,13.4,15.9c-6,4.5-14.3,10.4-18.1,10.6c-3.5,0.2-6.3-1.3-7.7-1.7" />
+        <path id="l-arm-4" class="pool9" d="M252.6,284.3c0,0,11,9.4,12.4,15.9c1,4.2,2.4,10.2,1.8,14c-0.3,2.1-1.1,5.2-1.7,6.5" />
+        <path id="l-arm-5" class="pool9" d="M252.6,284.3c0,0,0.3,7,0.5,14.3c0.1,4.3-17.9,2.7-21.4,2.3c-2.1-0.2-8.7-1.2-11-4" />
+      </g>
+    </g>
+  </svg>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+  <script type="text/javascript" src="./js/myscript.js"></script>
+    
+</body>
+</html>
