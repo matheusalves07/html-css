@@ -22,7 +22,6 @@ header > h1{
 menu {
     display: block;
 }
-
 menu > ul {
     list-style-type: none;
 
