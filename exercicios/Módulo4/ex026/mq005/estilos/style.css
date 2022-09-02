@@ -20,9 +20,25 @@ header > h1{
 
 }
 
+span.material-symbols-outlined {
+    background-color: rgb(32, 32, 32);
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+span.material-symbols-outlined:hover{
+    background-color: white;
+    color: black;
+
+}
+
 
 menu {
-    display: block;
+    display: none;
 }
 menu > ul {
     list-style-type: none;
